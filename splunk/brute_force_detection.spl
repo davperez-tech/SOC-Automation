@@ -1,1 +1,1 @@
-
+index=mydfir-project EventCode=4625 | stats count by ComputerName,user,src_ip

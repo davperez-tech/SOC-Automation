@@ -21,7 +21,6 @@ The main goal of this project is to create a modern, automated SOC workflow that
 7. Additional Tools: Remote Desktop Protocol (RDP)
 
 ## Methodology
-
 - Environment setup and VM deployment: I began by deploying multiple virtual machines using VMware Workstation, including Ubuntu Server for Splunk and N8N, Windows 10 for endpoint telemetry, and Kali Linux for optional testing. This created a realistic SOC lab environment to simulate real-world monitoring scenarios.
 
 - Log collection and monitoring: Windows 10 telemetry was collected using the Splunk Universal Forwarder, forwarding Security, System, and Application logs to Splunk Enterprise. Splunk was configured to parse incoming data and generate alerts for events like failed logins or suspicious activity.
@@ -33,3 +32,6 @@ The main goal of this project is to create a modern, automated SOC workflow that
 - Incident response simulation: Recommendations from the AI were used to simulate SOC actions, such as isolating hosts, reviewing event logs, or resetting credentials. This step validated the end-to-end effectiveness of the workflow in improving response efficiency.
 
 - Post-automation analysis: I observed the lab for repeated alert scenarios, monitoring how the AI-assisted workflow handled incidents over time. Metrics included alert processing speed, accuracy of severity assessments, and the usefulness of recommended next steps, providing insight into the practical value of AI integration in SOC operations.
+
+## Conclusion
+This project provides a fully functional, AI-driven SOC workflow that automates alert processing and incident analysis. By leveraging Splunk, N8N, and OpenAI, the lab demonstrates how security teams can increase efficiency and improve response times. The setup is intended for educational and portfolio purposes, providing hands-on experience with SOC tools, workflow automation, and AI integration in cybersecurity operations.

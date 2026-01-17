@@ -24,12 +24,15 @@ The main goal of this project is to create a modern, automated SOC workflow that
 - Environment setup and VM deployment: I began by deploying multiple virtual machines using VMware Workstation, including Ubuntu Server for Splunk and N8N, Windows 10 for endpoint telemetry. This created a realistic SOC lab environment to simulate real-world monitoring scenarios.
 
 - Log collection and monitoring: Windows 10 telemetry was collected using the Splunk Universal Forwarder, forwarding Security, System, and Application logs to Splunk Enterprise. Splunk was configured to parse incoming data and generate alerts for events like failed logins or suspicious activity.
+  - [Splunk SPL](https://github.com/davperez-tech/SOC-Automation/blob/main/splunk/brute_force_detection.spl)
 
 <p align="center">
 <img width="837" height="707" alt="Logon Failed - Win Event Viewer" src="https://github.com/user-attachments/assets/ecc774eb-d94f-49a6-afc5-6a6a13d3ef8a" />
 </p>
 
 - Automation workflow creation: N8N was deployed using Docker Compose on the Ubuntu server. I built workflows to process incoming alerts from Splunk, parse event data, and integrate AI using OpenAI GPT-4.1 Mini. The AI enriched alerts with context, assessed severity, and recommended actionable steps for analysts.
+  - [Docker Compose YAML](https://github.com/davperez-tech/SOC-Automation/blob/main/n8n/docker-compose.yaml)
+  - [N8N Automation Workflow](https://github.com/davperez-tech/SOC-Automation/blob/main/n8n/soc_automation_workflow.json)
 
 - Alert handling and AI processing: Simulated alerts were generated on the Windows 10 VM, including failed logins and event triggers. These alerts were sent to N8N, processed by ChatGPT, and structured output was sent to Slack for review. This demonstrated automated triage and intelligence enrichment in the SOC workflow.
 

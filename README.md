@@ -20,6 +20,13 @@ The main goal of this project is to create a modern, automated SOC workflow that
 6. Communication: Slack
 7. Additional Tools: Remote Desktop Protocol (RDP)
 
+## Diagram
+
+<p align="center">
+<img width="1062" height="514" alt="architecture" src="https://github.com/user-attachments/assets/5143f42a-9587-488d-bc39-df8dc17071b9" />
+</p>
+
+
 ## Methodology
 - Environment setup and VM deployment: I began by deploying multiple virtual machines using VMware Workstation, including Ubuntu Server for Splunk and N8N, Windows 10 for endpoint telemetry. This created a realistic SOC lab environment to simulate real-world monitoring scenarios.
 
@@ -35,6 +42,8 @@ The main goal of this project is to create a modern, automated SOC workflow that
   - [N8N Automation Workflow](https://github.com/davperez-tech/SOC-Automation/blob/main/n8n/soc_automation_workflow.json)
 
 - Alert handling and AI processing: Simulated alerts were generated on the Windows 10 VM, including failed logins and event triggers. These alerts were sent to N8N, processed by ChatGPT, and structured output was sent to Slack for review. This demonstrated automated triage and intelligence enrichment in the SOC workflow.
+
+  - [OpenAI Prompt](https://github.com/davperez-tech/SOC-Automation/blob/main/OpenAI/openai_prompt.txt)
 
 - Incident response simulation: Recommendations from the AI were used to simulate SOC actions, such as isolating hosts, reviewing event logs, or resetting credentials. This step validated the end-to-end effectiveness of the workflow in improving response efficiency.
 

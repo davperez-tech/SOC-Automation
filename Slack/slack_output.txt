@@ -1,0 +1,28 @@
+Summary:
+An alert titled "Test-Brute-Force" was triggered involving the user "w10" on computer "DESKTOP-S7H1P5I." The suspicious activity is a brute-force attack attempt originating from the source IP address 92.118.39.36. This activity typically involves repeated attempts to guess passwords or credentials to gain unauthorized access, here likely targeting SSH or other remote access services on the system.
+
+IOC Enrichment:
+- IP Address: 92.118.39.36  
+- Public IP, IPv4  
+- Country: Romania (RO)  
+- ISP: DMZHOST (Data Center/Web Hosting/Transit) 
+- Abuse Confidence Score: 100 (very high; indicates a strong likelihood of malicious activity)  
+- History: This IP has over 200 reports related to abusive behavior, mainly SSH brute-force attempts and authentication failures involving root access attempts.  
+- Detected by numerous sources globally as involved in SSH brute force attacks and failed login attempts.  
+- Reports mention detection by fail2ban and repeated username and password guessing on various ports.
+
+
+Severity Assessment:
+- MITRE ATT&CK Tactic: Initial Access (TA0001), Credential Access (TA0006), Defense Evasion (TA0005) potentially through brute force (T1110).
+- The source IP has direct association with repeated brute force attacks globally.
+- Severity: High, due to repeated brute force attempts, use of root account targets, and the high confidence score from threat intelligence.
+
+Recommended Actions:
+1. Block the IP address 92.118.39.36 immediately on network perimeter devices such as firewalls and intrusion prevention systems to prevent further attempts.
+2. Review authentication logs on the affected machine (DESKTOP-S7H1P5I) for any successful or suspicious logins.
+3. Ensure that strong password policies and account lockout mechanisms are in place to mitigate brute force attacks.
+4. Conduct a scan on DESKTOP-S7H1P5I for any signs of compromise post brute force attempts.
+5. Monitor network and endpoint security logs closely for any lateral movement or privilege escalation attempts.
+6. Update and patch all remote access services and related software to minimize vulnerabilities.
+7. Inform users about the importance of account security and consider multi-factor authentication (MFA) for remote logins.
+8. Investigate network for other similar attempts from the same or related IPs and blacklist accordingly.

@@ -40,7 +40,7 @@ The main goal of this project is to create a modern, automated SOC workflow that
 ## Demo
 
 https://github.com/user-attachments/assets/67b40aa7-63f4-4383-afe5-68d00734929d
-
+  - [Slack Output](https://github.com/davperez-tech/SOC-Automation/blob/main/Slack/slack_output.txt)
 
 ## Conclusion
 The SOC Automation Project showcases the practical application of AI and automation in a modern Security Operations Center workflow, bridging the gap between traditional SOC processes and emerging technologies. Through the integration of Splunk for centralized log collection, N8N for orchestrating automated workflows, and GPT-4.1 Mini for intelligent alert analysis, this project demonstrates how alerts from endpoints can be automatically ingested, enriched, and triaged with minimal human intervention. Analysts are empowered with actionable insights delivered in real-time through Slack, improving situational awareness and reducing response times.

@@ -25,6 +25,10 @@ The main goal of this project is to create a modern, automated SOC workflow that
 
 - Log collection and monitoring: Windows 10 telemetry was collected using the Splunk Universal Forwarder, forwarding Security, System, and Application logs to Splunk Enterprise. Splunk was configured to parse incoming data and generate alerts for events like failed logins or suspicious activity.
 
+<p align="center">
+<img width="837" height="707" alt="Logon Failed - Win Event Viewer" src="https://github.com/user-attachments/assets/ecc774eb-d94f-49a6-afc5-6a6a13d3ef8a" />
+</p>
+
 - Automation workflow creation: N8N was deployed using Docker Compose on the Ubuntu server. I built workflows to process incoming alerts from Splunk, parse event data, and integrate AI using OpenAI GPT-4.1 Mini. The AI enriched alerts with context, assessed severity, and recommended actionable steps for analysts.
 
 - Alert handling and AI processing: Simulated alerts were generated on the Windows 10 VM, including failed logins and event triggers. These alerts were sent to N8N, processed by ChatGPT, and structured output was sent to Slack for review. This demonstrated automated triage and intelligence enrichment in the SOC workflow.
@@ -36,7 +40,6 @@ The main goal of this project is to create a modern, automated SOC workflow that
 ## Demo
 
 https://github.com/user-attachments/assets/67b40aa7-63f4-4383-afe5-68d00734929d
-
 
 
 ## Conclusion

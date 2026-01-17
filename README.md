@@ -1,4 +1,6 @@
 # SOC Automation: AI-Driven Workflow
+
+
 ## Introduction
 This project demonstrates how to integrate AI into a Security Operations Center (SOC) workflow for automated alert handling and incident response. The lab showcases an end-to-end SOC setup using Splunk as the SIEM, N8N for workflow automation, and OpenAI’s ChatGPT to process alerts and provide actionable insights. It is designed for learning purposes and portfolio enhancement.
 
@@ -31,6 +33,8 @@ The main goal of this project is to create a modern, automated SOC workflow that
 - Environment setup and VM deployment: I began by deploying multiple virtual machines using VMware Workstation, including Ubuntu Server for Splunk and N8N, Windows 10 for endpoint telemetry. This created a realistic SOC lab environment to simulate real-world monitoring scenarios.
 
 - Log collection and monitoring: Windows 10 telemetry was collected using the Splunk Universal Forwarder, forwarding Security, System, and Application logs to Splunk Enterprise. Splunk was configured to parse incoming data and generate alerts for events like failed logins or suspicious activity.
+
+  - [Windows Event Viewer → Splunk Indexer Configuration](https://github.com/davperez-tech/SOC-Automation/blob/main/splunk/inputs.conf)
   - [Splunk SPL](https://github.com/davperez-tech/SOC-Automation/blob/main/splunk/brute_force_detection.spl)
 
 <p align="center">
